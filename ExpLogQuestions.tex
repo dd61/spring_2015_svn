@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+\usepackage{etex}
+\usepackage{amssymb,amsmath,fancyhdr,multicol}
+
+
+\usepackage[metapost]{mfpic}
+
+%\pgfplotsset{compat=1.9}
+%\usepackage{amsmath}
+\usepackage[pdftex]{graphicx}
+%\usepackage{mystylefortest}
+%\usepackage{multicol}
+\usepackage{pst-plot}
+\usepackage{pgfplots}
+
+\usepackage{tikz}
+\usepackage{tkz-2d}
+\usepackage{tkz-base}
+\usetikzlibrary{calc}
+
+\usepackage[inline]{enumitem}
+
+\textheight 25cm% 25.5cm
+\textwidth 18cm \topmargin -2.5cm
+\parindent 0pt
+\oddsidemargin -1cm \columnsep 18pt 
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy} \lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{}\rfoot{}
+%\newcommand{\ds}{\displaystyle}
+
+\usepackage{tabularx}
+\renewcommand{\tabularxcolumn}[1]{>{\centering\arraybackslash}m{#1}}
+
+\usepackage{array}
+\newcolumntype{?}{!{\vrule width 1pt}}
+
+\usepackage[linewidth=1pt]{mdframed}
+
+%\prec 
+\pgfplotsset{compat=1.9} %%May have to change to 1.11 at work
+
+\pgfplotsset{soldot/.style={color=blue,only marks,mark=*}} \pgfplotsset{holdot/.style={color=blue,fill=white,only marks,mark=*}}
+\pgfplotsset{
+  grid style = {
+    dash pattern = on 0.05mm off 1mm,
+    line cap = round,
+    black,
+    line width = 0.5pt
+  }
+}
+
+
+\opengraphsfile{ExpLogProblems}
+
+\begin{document}
+
+\centerline{\textbf{Exp/Log Questions}}
+
+\vspace{.5in}
+
+%\textbf{Name:}\hrulefill\
+
+%\vspace{.25in}
+
+%\makebox[\textwidth]{Name:\enspace\hrulefill}
+%\vspace{1pt}
+
+%\begin{questions}
+
+
+%\addpoints
+%\qformat{Question \thequestion\dotfill
+ %        {(\pointsofquestion{\arabic{question}} \points)}}
+        
+\begin{enumerate} 
+
+\item Are these statement true or false? 
+\begin{enumerate}
+\item The graph of $\displaystyle f(x) = 2^{x+1}$ can be obtained by applying a vertical stretch by a factor of 2 to
+the graph of the function $\displaystyle g(x) = 2^x$.
+\item The graph of $\displaystyle f(x) = 2^{x+1}$ can be obtained by applying a horizontal shift by 1 to the left
+the graph of the function $\displaystyle g(x) = 2^x$.
+\item  For any number $x$, $\displaystyle \ln e^{x^2}=x^2$.
+\item  For any positive number $x$, $\displaystyle  e^{2\ln x}=x^2$.
+
+\end{enumerate}
+\item Find the equation of the vertical asymptote of the function $\displaystyle f(x)=2\log_2(2x+1) +1$.
+\item  Solve the following equations algebraically. Write the solutions in exact form (not in decimal form).
+\begin{enumerate}
+\item $\displaystyle \ln(2x) - \ln(2x - 1) = 2$
+\item $\displaystyle \log(x)+\log(x+3)=1$
+\item $\displaystyle 2\left (3^{4x}\right )=5^x$
+\item $\displaystyle 3=\frac{4}{1+e^x}$
+\item $\displaystyle 16=\left (1+e^x\right )^4$
+\item $\displaystyle 1.8=\left (1+\frac{x}{12}\right )^{12}$
+\item $\displaystyle \log(x)+\log(x-3)=\log(10x)$
+\item $\displaystyle \frac{3\log x}{2}= -2$
+\item $\displaystyle 2 = 1.01^n$
+
+\end{enumerate}
+\item The temperature of a cup of coffee $T(x)$  (in $^0$F) $x$ minutes
+after it is served is given by the function $\displaystyle T(x) = 40 + 160 (0.8)^x$. How long does it take for the coffee to reach a temperature of $100^0$F?  Write your answer in exact form (not in decimal form).
+\item A population grows exponentially and triples in size every twenty years. The initial population is one million. What is the doubling time of this population? Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item Find the amount of an annuity that consists of 30 annual payments of \$500 each into an account that
+pays 7\% interest per year. Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item The count in a bacteria culture was 320 after one hour and 1000 after five hours. What is the
+relative growth rate of the bacteria population? Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item The number of bacteria in a culture is given by the formula $\displaystyle n(t ) = 200e^{0.57t}$ where $t$ is measured in
+hours. After how many
+hours will the number of bacteria reach 500? Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item 8000 dollars is invested in an account that yields 6\% interest per year. After how many years will the account be worth \$10000 if the interest is compounded monthly? Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item How much money will you have at the end of four years if you deposit \$10000 a year (at the end of each year) into a bank account paying 10\% interest? Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item I invested \$100,000 into an account that pays 4\% compounded monthly, and I plan to withdraw my money in one year. How much more interest do I earn if I leave my money in the account for a year and a half, instead of withdrawing it after a year? Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item Graph $\displaystyle y=\ln(4-x)$. Draw and label the asymptote and the $x$-intercept. What are the transformations of $y=\ln x$ that result in $\displaystyle y=\ln(4-x)$?
+\item  Graph $\displaystyle y=\ln(-4-x)$. Draw and label the  asymptote and the $x$-intercept. What are the transformations of $y=\ln x$ that result in $\displaystyle y=\ln(-4-x)$?
+\item  Graph $\displaystyle y=-\ln(4+x)$. Draw and label the  asymptote and the $x$-intercept. What are the transformations of $y=\ln x$ that result in $\displaystyle y=-\ln(4+x)$?
+\item Expand $\displaystyle \log_5 \left ( \frac{x}{25}\right )^3$ using the properties of logarithms and simplify. Assume when necessary that $x$ represents a positive real number.
+\item Use the properties of logarithms to write $\displaystyle 4 \ln(x) + 2 \ln(y)$ as a single logarithm.
+\item Ebbinghaus' Law of Forgetting  states that if a task is learned at a performance level $P_0$, then after a time interval $t$ the performance level P satisfies
+$\displaystyle \log P = \log P_0 - c \log(t + 1)$
+where $c$ is a constant that depends on the type of task and $t$ is measured in months.
+
+Use Ebbinghaus' Law of Forgetting to estimate a student's score on a biology test two years after he got a score of 75 on a test covering the same material. Assume $c = 0.3$ and $t$ is measured in months. Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item Use the Laws of Logarithms to combine the expression:
+$\displaystyle \ln 2 + 2 \ln x + 4 \ln(x^2 + 2)$.
+\item Evaluate the expression: $\displaystyle \log_2 10 - \log_2 30 + \log_2 96$ and simplify your answer as much as possible.
+\item Graph $\displaystyle f(x)=e^{x-1}-1$. Draw and label the asymptote and all intercepts.
+\item  Find the present value of \$10,000 if interest is paid at a rate of 9\% per year, compounded semiannually, for 2 years. Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item Find the annual percentage yield for an investment that earns 5\% per year, compounded monthly. Write your answer in exact form (not in decimal form) and simplify as much as possible.
+\item Find the domain of the function $\displaystyle f(x) = 
+\sqrt[4]{\log_4(x)}$ and write your answer using interval notation. 
+\item Find the domain of the function $\displaystyle f(x) = 
+\ln(7 - x) + \ln(x - 2)$ and write your answer using interval notation. 
+\item Evaluate the expression:
+$\displaystyle \log_3 27$.
+
+
+
+\end{enumerate}
+\end{document}

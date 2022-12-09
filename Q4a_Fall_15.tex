@@ -1,0 +1,137 @@
+\documentclass[11pt,answers]{exam}
+
+\usepackage{etex}
+\usepackage{amssymb,amsmath,multicol} %<-- InWorksheetExam1 i also have fancyhdr,
+
+\usepackage[metapost]{mfpic}
+\usepackage[pdftex]{graphicx}
+
+\usepackage{pst-plot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+
+\usepackage{tikz}
+\usepackage{tkz-2d}
+\usepackage{tkz-base}
+\usetikzlibrary{calc}
+
+\usepackage[inline]{enumitem}
+\usepackage{refcount}%<-- non in WorksheetExam1
+
+%\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\vasymptote}[2][]{
+    \draw [densely dashed,#1] ({rel axis cs:0,0} -| {axis cs:#2,0}) -- ({rel axis cs:0,1} -| {axis cs:#2,0});
+}
+
+\addpoints
+%\printanswers
+\noprintanswers
+
+\opengraphsfile{Q4a_Fall_15}
+
+\begin{document}
+\extrawidth{-0.3in}
+\pagestyle{headandfoot}
+
+\setlength{\hoffset}{-.25in}
+
+\extraheadheight{-.3in}
+\runningheadrule
+\firstpageheader{\bfseries {MATH1-UC 1171}}{ \bfseries {Quiz 4 }}{\bfseries {10/6/2015}} 
+
+
+
+\firstpagefooter{} %%&&CHANGED
+                {}
+                {Points earned: \hbox to 0.5in{\hrulefill}
+                 out of  \pointsonpage{\thepage} points}
+                 
+						
+
+\vspace*{0.1cm}
+\hbox to \textwidth { \scshape {Name:} \enspace\hrulefill}
+\vspace{0.1in}
+
+
+
+
+\pointpoints{point}{points}
+
+\begin{questions}
+
+
+\addpoints
+
+\question The function $f(x)$ is given by the formula $\displaystyle f(x)=x^2$, and the domain is the interval $[-4,0]$
+
+\begin{parts}
+\bonuspart[2] Write the range of $f(x)$ in interval form. \dotfill 
+
+\part[3] Graph the function (note: the domain is $[-4,0]$) and use your graph to explain why this function has an inverse.
+
+\begin{center}
+
+\begin{mfpic}[20]{-6}{6}{-2}{5}
+
+%\polyline{(0,-2), (4,1), (4,2), (5,3)}
+
+%\polyline{(0,1), (2,0)} 
+
+%\polyline{(2,0), (4,2)}
+
+%\point[5pt]{(0,1), (4,2)}
+
+\axes
+
+\xmarks{-5,-4,-3,-2,-1,1,2,3,4,5}
+
+\ymarks{-2,-1,1,2,3,4,}
+
+\tlpointsep{4pt}
+
+\axislabels {x}{{\tiny $1$} 1, {\tiny $2$} 2, {\tiny $3$} 3, {\tiny $4$} 4, {\tiny $5$} 5, {\tiny $-1$} -1, {\tiny $-2$} -2, {\tiny $-3$} -3, {\tiny $-4$} -4, {\tiny $-5$} -5}
+
+\axislabels {y}{{\tiny $1$} 1,{\tiny $2$} 2, {\tiny $3$} 3, {\tiny $4$} 4,  {\tiny $-1$} -1, {\tiny $-2$} -2}
+
+  % Grid
+  %\drawcolor[gray]{0.25}
+  %\gridlines{1, 1}
+\drawcolor[gray]{0.75} 
+\grid{1,1}
+
+\end{mfpic}
+
+\end{center}
+
+\fillwithdottedlines{2.5cm}
+
+\part[2] Find $\displaystyle f^{-1}$ and show your work step by step.
+
+\fillwithdottedlines{2.5cm}
+
+\part[2] Write the range of $\displaystyle f^{-1}$ in interval form. \dotfill 
+
+
+\end{parts}
+\question[1] For his services, a private investigator requires a \$500 retention fee plus \$95 per hour. The number of hours the investigator spends working on a case is $x$, and the
+investigator's fee as a function of $x$ is $f(x)$. What does 
+$\displaystyle f^{-1}$ represent? Circle the {\underline{one}} best answer.
+
+\begin{choices}
+\choice $\displaystyle f^{-1}$ represents the amount in dollars paid for $x$ numbers of hours of investigation.
+ 
+\choice $\displaystyle f^{-1}$ represents the amount in dollars paid beyond the retention fee for $x$ numbers of hours of investigation.
+    
+
+\choice $\displaystyle f^{-1}$ represents the amount paid per each hour of investigation.
+\choice $\displaystyle f^{-1}$ represents the number of hours of investigation the investigator spends on a case for $x$ dollars.
+ 
+\choice $\displaystyle f^{-1}$ represents the maximum number of hours of investigation the investigator will spend on a case.
+ 
+
+\end{choices}
+
+\end{questions}
+
+\end{document}                 

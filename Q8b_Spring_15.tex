@@ -1,0 +1,81 @@
+\documentclass[11pt,answers]{exam}
+
+\usepackage{etex}
+\usepackage{amssymb,amsmath,multicol} %<-- InWorksheetExam1 i also have fancyhdr,
+
+\usepackage[metapost]{mfpic}
+\usepackage[pdftex]{graphicx}
+
+\usepackage{pst-plot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+
+\usepackage{tikz}
+\usepackage{tkz-2d}
+\usepackage{tkz-base}
+\usetikzlibrary{calc}
+
+\usepackage[inline]{enumitem}
+\usepackage{refcount}%<-- non in WorksheetExam1
+
+%\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\vasymptote}[2][]{
+    \draw [densely dashed,#1] ({rel axis cs:0,0} -| {axis cs:#2,0}) -- ({rel axis cs:0,1} -| {axis cs:#2,0});
+}
+
+\addpoints
+%\printanswers
+\noprintanswers
+
+\opengraphsfile{Q8a_Spring_15}
+
+\begin{document}
+\extrawidth{-0.3in}
+\pagestyle{headandfoot}
+
+\setlength{\hoffset}{-.25in}
+
+\extraheadheight{-.4in}
+\runningheadrule
+\firstpageheader{\bfseries {MATH1-UC 1171}}{ \bfseries {QUIZ 8 }}{\bfseries {4/21/2015}} 
+
+
+
+\firstpagefooter{} %%&&CHANGED
+                {}
+                {Points earned: \hbox to 0.5in{\hrulefill}
+                 out of  \pointsonpage{\thepage} points}
+                 
+						
+
+\vspace*{0.7cm}
+\hbox to \textwidth { \scshape {Name:} \enspace\hrulefill}
+\vspace{0.2in}
+
+
+
+
+\pointpoints{point}{points}
+
+\begin{questions}
+
+
+\addpoints
+
+\question[2] An investor deposits \$400 every December 15 and June 15 for 10 years in an account that earns interest at the rate of 8\% per year, compounded semiannually. How much will be in the account immediately after the last payment? [Notes: $\displaystyle A_f=R\frac{((1+i)^n-1)}{i}$. Write your answer in exact form and do not simplify.]
+\fillwithdottedlines{1.5in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\question[2] A culture starts with 10,000 bacteria and the number doubles every 40 minutes. Write a formula $n(t)$ that models the number of bacteria after $t$ minutes.
+
+\fillwithdottedlines{1.5in}
+%%%%%%%%%%%%%%%%%%%%%%
+
+\question[2] A deposit of \$100,000 is made into an interest-bearing account for which the interest is compounded continuously. After 5 years, the balance in the account is \$200,000. Assuming that no money has been deposited into or withdrawn from the account during the 5 years, what is the annual interest rate for this account?  [Write your answer in exact form and do not simplify.]
+
+\fillwithdottedlines{1.5in}
+\end{questions}
+
+\end{document}                 
